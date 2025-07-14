@@ -5,12 +5,12 @@ use std::os::raw::{c_int, c_long, c_uint, c_ulong};
 use std::ptr::null_mut;
 use std::mem::zeroed;
 
-const PANEL_HEIGHT: i32 = 40;
+const PANEL_HEIGHT: i32 = 39;
 const PANEL_PADDING_TOP: i32 = 0;
 const DOT_RADIUS: i32 = 8;
 const DOT_MARGIN: i32 = 8;
-const DOT_MARGIN_RIGHT: i32 = 24;
-const ICON_SIZE: i32 = 24;
+const DOT_MARGIN_RIGHT: i32 = 0;
+const ICON_SIZE: i32 = 32;
 const ICON_MARGIN_LEFT: i32 = 12;
 const TEXT_MARGIN_LEFT: i32 = 8;
 const WIN_W: i32 = 800;
