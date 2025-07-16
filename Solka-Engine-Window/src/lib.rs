@@ -270,7 +270,7 @@ fn draw_wizard_block(hdc: HDC, win_w: i32, win_h: i32, font_name: &[u16], wizard
     unsafe {
         SetBkMode(hdc, 1);
         SetTextColor(hdc, rgb(210, 210, 210));
-        DrawTextW(hdc, instr_text.as_ptr(), (instr_text.len() as i32 - 1).max(0), &mut instr_rect, 0x0001 | 0x0010 | 0x0004 | 0x0020); // DT_CENTER | DT_WORDBREAK
+        DrawTextW(hdc, instr_text.as_ptr(), (instr_text.len() as i32 - 1).max(0), &mut instr_rect, 0x0001 | 0x0010 | 0x0004 | 0x0020);
         SelectObject(hdc, old_instr_font);
         DeleteObject(instr_font);
     }
@@ -312,7 +312,7 @@ fn draw_wizard_block(hdc: HDC, win_w: i32, win_h: i32, font_name: &[u16], wizard
     let button_w = 140;
     let button_gap = 14;
     let line_x = 32;
-    let line_y = layout.buttons_y - 18; // чуть выше кнопок
+    let line_y = layout.buttons_y - 18;
     let line_right = line_x + (button_count * button_w + (button_count - 1) * button_gap);
     let line_pen = unsafe { CreatePen(0, 2, rgb(200, 200, 200)) };
     let old_pen = unsafe { SelectObject(hdc, line_pen as _) };
